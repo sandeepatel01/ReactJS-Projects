@@ -24,12 +24,21 @@ function App() {
     }
   }
 
+  const resetValue = () => {
+    setCounter(counter = 0)
+  }
+
   return (
     <>
       <h1>Counter App</h1>
       <h2>Count Value: {counter}</h2>
-      <button onClick={addValue}>Add Value</button>
+      <button
+        onClick={addValue}
+      >Add Value</button>
       <button onClick={removeValue}>Removed Value</button>
+      <div>
+        <button onClick={resetValue}>Reset</button>
+      </div>
     </>
   )
 }
