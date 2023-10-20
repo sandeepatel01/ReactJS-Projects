@@ -1,0 +1,24 @@
+// function hello(){        // Hooks
+//     return []
+// }
+
+import { useEffect, useState } from "react";
+
+import React from 'react'
+
+const useCurrencyInfo = (currency) => {
+    const [data, setData] = useState({})
+    useEffect(() => {
+        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
+            .then((res) => res.json())
+            .then((res) => setData(res[currency]))
+        // console.log(data);
+        console.table(data)
+    }, [currency])
+    // console.log(data);
+    console.table(data)
+    return data
+
+}
+
+export default useCurrencyInfo
