@@ -4,8 +4,6 @@
 
 import { useEffect, useState } from "react";
 
-import React from 'react'
-
 const useCurrencyInfo = (currency) => {
     const [data, setData] = useState({})
     useEffect(() => {
